@@ -46,7 +46,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://zerodha-clone-c72z-git-main-radheshyamdangis-projects.vercel.app";
           
         }, 1000);
       } else {

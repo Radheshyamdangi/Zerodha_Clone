@@ -36,7 +36,7 @@ const Signup = () => {
   
     try {
       const { data } = await axios.post(
-        "http://localhost:8001/signup", 
+        "https://zerodha-clone-q1ze.vercel.app/signup", 
         { ...inputValue },
         {
           withCredentials: true

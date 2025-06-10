@@ -36,14 +36,14 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // ✅ Allow credentials and specific frontend origin
-// app.use(cors({
-//   origin: "*", 
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true  // ✅ Allow cookies and authentication headers
-// }));
+app.use(cors({
+  origin: "*", 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true  // ✅ Allow cookies and authentication headers
+}));
 app.use(cookieParser());
 
 app.use(express.json());

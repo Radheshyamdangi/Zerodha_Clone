@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:true}));
 
 const allowedOrigins = [
   "https://zerodha-clone-two-sooty.vercel.app/",
-  "https://zerodha-clone-c72z.vercel.app/" // optional for local dev
+  "https://zerodha-clone-c72z.vercel.app/" 
 ];
 
 const corsOptions = {

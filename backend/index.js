@@ -55,6 +55,10 @@ app.use(express.json());
 
 app.use("/",authRoute);  
 
+app.get("/",async(req, res) => {
+  res.send("hello User");
+})
+
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
   res.json(allHoldings);

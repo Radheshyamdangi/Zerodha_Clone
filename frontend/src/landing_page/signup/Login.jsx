@@ -35,7 +35,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodha-clone-q1ze.vercel.app/login",
+        "https://zerodha-clone-q1ze.vercel.app",
         {
           ...inputValue,
         },

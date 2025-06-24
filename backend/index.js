@@ -24,31 +24,33 @@ const authRoute = require("./Routes/AuthRoute");
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));
 
-// const allowedOrigins = [
-//   "https://zerodha-clone-two-sooty.vercel.app",
-//   "https://zerodha-clone-c72z.vercel.app" 
-// ];
+const allowedOrigins = [
+  "https://zerodha-clone-oi5bntgxg-radheshyamdangis-projects.vercel.app",
+  "https://zerodha-clone-two-sooty.vercel.app",
+  "https://zerodha-clone-c72z.vercel.app"
+];
 
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true
-// };
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
+
 
 // ✅ Allow credentials and specific frontend origin
-app.use(cors({
-  origin: "*", 
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true  // ✅ Allow cookies and authentication headers
-}));
+// app.use(cors({
+//   origin: "*", 
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true  // ✅ Allow cookies and authentication headers
+// }));
 app.use(cookieParser());
 
 app.use(express.json());
